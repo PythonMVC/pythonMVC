@@ -1,4 +1,4 @@
-"""`pymvc db` command implementation."""
+"""`pmvc db` command implementation."""
 
 from __future__ import annotations
 

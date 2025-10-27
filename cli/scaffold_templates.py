@@ -188,7 +188,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pymvc = "PythonMVC.cli:app"
+pmvc = "PythonMVC.cli:app"
 """
 
 ALEMBIC_INI = """[alembic]

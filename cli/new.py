@@ -1,4 +1,4 @@
-"""`pymvc new` command implementation."""
+"""`pmvc new` command implementation."""
 
 from __future__ import annotations
 
@@ -78,5 +78,5 @@ def new(name: str, database: str = "sqlite") -> None:
         "Next steps:\n"
         f"  cd {name}\n"
         "  pip install -e .\n"
-        '  pymvc db init && pymvc db migrate "init" && pymvc db upgrade && pymvc server'
+        '  pmvc db init && pmvc db migrate "init" && pmvc db upgrade && pmvc server'
     )

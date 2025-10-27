@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pymvc"
+name = "pmvc"
 version = "0.0.1"
 description = "Rails-style Python MVC framework: Starlette + SQLAlchemy, generators, Redis cache, security, admin."
 readme = "README.md"
@@ -41,7 +41,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pymvc = "PythonMVC.cli:app"
+pmvc = "PythonMVC.cli:app"
 
 [project.urls]
 Homepage = "https://github.com/PythonMVC/pythonmvc"

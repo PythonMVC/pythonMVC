@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pymvc"
+version = "0.0.1"
+description = "Rails-style Python MVC framework: Starlette + SQLAlchemy, generators, Redis cache, security, admin."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Muhammad Waleed Khalid", email = "muhammadwaleedkhalid1999@gmail.com" }]
+keywords = ["python", "web-framework", "starlette", "sqlalchemy", "alembic", "redis", "mvc", "cli", "scaffold"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: AsyncIO",
+  "Framework :: Starlette",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+  "Topic :: Software Development :: Code Generators",
+]
+
+dependencies = [
+  "starlette>=0.40",
+  "uvicorn[standard]>=0.30",
+  "SQLAlchemy>=2.0",
+  "alembic>=1.13",
+  "jinja2>=3.1",
+  "typer>=0.12",
+  "pydantic>=2.8",
+  "redis>=5.0",
+  "psycopg[binary]>=3.2",
+  "pymysql>=1.1",
+  "itsdangerous>=2.2",
+  "python-multipart>=0.0.9",
+]
+
+[project.scripts]
+pymvc = "PythonMVC.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/PythonMVC/pythonmvc"
+Issues = "https://github.com/PythonMVC/pythonmvc/issues"
+

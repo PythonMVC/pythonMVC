@@ -6,7 +6,7 @@ Rails-style, batteries-included **PythonMVC**: Starlette + SQLAlchemy, generator
 
 ## ✨ Features
 - **Fast ASGI** app (Starlette) + **clean MVC** conventions
-- **Generators**: `pmvc new`, `pmvc generate model|controller|scaffold`
+- **Generators**: `pymvc new`, `pymvc generate model|controller|scaffold`
 - **ORM & Migrations**: SQLAlchemy 2.x + Alembic
 - **Multi-DB (SQL)**: SQLite / PostgreSQL / MySQL
 - **Caching**: Redis (async)
@@ -18,10 +18,10 @@ Rails-style, batteries-included **PythonMVC**: Starlette + SQLAlchemy, generator
 pip install -e .
 
 # create a new app
-pmvc new blog --database=sqlite
+pymvc new blog --database=sqlite
 # or
-pmvc new blog --database=postgresql
-pmvc new blog --database=mysql
+pymvc new blog --database=postgresql
+pymvc new blog --database=mysql
 
 cd blog
 
@@ -32,10 +32,10 @@ export DATABASE_URL=sqlite:///db/app.db
 export CACHE_URL=redis://localhost:6379/0
 
 # init schema (SQL backends)
-pmvc db init
-pmvc db migrate "init"
-pmvc db upgrade
+pymvc db init
+pymvc db migrate "init"
+pymvc db upgrade
 
 # run
-pmvc server
+pymvc server
 # visit http://127.0.0.1:8000/posts and /admin

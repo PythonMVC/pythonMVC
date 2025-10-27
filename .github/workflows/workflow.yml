@@ -1,0 +1,35 @@
+name: publish (PyPI Trusted Publisher)
+
+on:
+  push:
+    tags:
+      - "v*.*.*"     # publish when you push a version tag
+
+permissions:
+  id-token: write     # REQUIRED for trusted publishing (OIDC)
+  contents: read
+
+jobs:
+  build-and-publish:
+    environment: pypi      # must match the PyPI form + your GH environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tooling
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build
+
+      - name: Build dist
+        run: python -m build
+
+      # No TWINE credentials needed with Trusted Publisher
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true

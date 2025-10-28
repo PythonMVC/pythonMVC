@@ -1,7 +1,4 @@
-"""Basic smoke tests for the PythonMVC package."""
-
-import importlib
 
 
-def temp_test() -> None:
+def test_temp() -> None:
     assert "test" == "test"

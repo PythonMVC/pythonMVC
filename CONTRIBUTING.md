@@ -1,7 +1,7 @@
 # Contributing to PythonMVC
 
 Thanks for helping! 💛
-1. Muhammad Waleed Khalid
+1. Muhammad Waleed Khalid [Github](www.github.com/wak327), [LinkedId](https://www.linkedin.com/in/muhammad-waleed-khalid-38a59419a/)
 
 
 ## Dev setup
